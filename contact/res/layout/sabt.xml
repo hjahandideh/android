@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:hint="@string/h1"/>
+        <TextView
+                android:text="@string/name"
+                android:id="@+id/tv1"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <EditText
+                android:id="@+id/fname"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:hint="@string/h2"/>
+        <TextView
+                android:text="@string/fname"
+                android:id="@+id/tv2"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <EditText
+                android:id="@+id/tel"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:hint="@string/h3"/>
+        <TextView
+                android:text="@string/name"
+                android:id="@+id/tv3"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"/>
+</LinearLayout>
