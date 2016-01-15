@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" package="com.example.test" android:versionCode="8">
+
+    <application>
+        <activity
+            android:name="com.example.test.MainActivity"
+            android:label="@String/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

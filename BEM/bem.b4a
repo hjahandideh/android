@@ -1,0 +1,102 @@
+﻿Version=5.02
+NumberOfModules=9
+Module1=SlideMenu
+Module2=about
+Module3=sbank
+Module4=CustomListView
+Module5=main3
+Module6=vorood
+Module7=ozveyat
+Module8=main2
+Module9=about1
+Build1=Default,bem.com
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~AddPermission(andriod.permission.INTERNET)~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=7
+File1=about.bal
+File2=d.bal
+File3=f.bal
+File4=main.bal
+File5=ozveyat.bal
+File6=sbank.bal
+File7=vorood.bal
+NumberOfLibraries=11
+Library1=core
+Library2=splistview
+Library3=sidemenubar
+Library4=phone
+Library5=animation
+Library6=stringutils
+Library7=reflection
+Library8=sql
+Library9=httputils2
+Library10=http
+Library11=customnotification
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: BEM
+	#VersionCode: 1
+	#VersionName: 1.0
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: true
+	#IncludeTitle: false
+#End Region
+
+Sub Process_Globals
+	
+End Sub
+
+Sub Globals
+	
+
+
+	Private ImageView1 As ImageView
+	Private Label1 As Label
+	Private Label2 As Label
+	Private Label3 As Label
+	Private Label4 As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("main")
+
+
+For Each view1 As View In Activity.getallviewsrecursive
+
+If view1 Is Label Then
+
+Dim Label1 As Label
+
+Label1 = view1
+
+Label1.typeface = Typeface.loadfromassets("yekan.ttf")
+
+End If
+
+Next
+	
+
+
+End Sub
+
+
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+
+Sub ImageView1_Click
+	StartActivity("main2")
+	Activity.Finish
+End Sub
