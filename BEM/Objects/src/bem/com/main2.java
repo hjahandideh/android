@@ -308,7 +308,6 @@ public class main2 extends Activity implements B4AActivity{
 
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.sql.SQL _sq = null;
-public static String _s = "";
 public bem.com.slidemenu _sm = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnshow = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext1 = null;
@@ -370,10 +369,10 @@ _dbload("");
 mostCurrent._edittext1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
  //BA.debugLineNum = 62;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
-final anywheresoftware.b4a.BA.IterableList group33 = mostCurrent._activity.GetAllViewsRecursive();
-final int groupLen33 = group33.getSize();
-for (int index33 = 0;index33 < groupLen33 ;index33++){
-_view1.setObject((android.view.View)(group33.Get(index33)));
+final anywheresoftware.b4a.BA.IterableList group32 = mostCurrent._activity.GetAllViewsRecursive();
+final int groupLen32 = group32.getSize();
+for (int index32 = 0;index32 < groupLen32 ;index32++){
+_view1.setObject((android.view.View)(group32.Get(index32)));
  //BA.debugLineNum = 63;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
  //BA.debugLineNum = 64;BA.debugLine="Dim Label1 As Label";
@@ -405,15 +404,17 @@ if (_answ==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) {
 mostCurrent._activity.Finish();
  //BA.debugLineNum = 92;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
+ //BA.debugLineNum = 93;BA.debugLine="Main.n.Cancel(1)";
+mostCurrent._main._n.Cancel((int) (1));
  }else {
- //BA.debugLineNum = 94;BA.debugLine="Return True";
+ //BA.debugLineNum = 95;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  };
  }else {
- //BA.debugLineNum = 97;BA.debugLine="Return False";
+ //BA.debugLineNum = 98;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -438,79 +439,79 @@ String _condition = "";
 anywheresoftware.b4a.objects.PanelWrapper _p1 = null;
 int _i = 0;
 anywheresoftware.b4a.objects.ConcreteViewWrapper _view1 = null;
- //BA.debugLineNum = 100;BA.debugLine="Sub DBload(q As String)";
- //BA.debugLineNum = 102;BA.debugLine="Private condition As String";
+ //BA.debugLineNum = 101;BA.debugLine="Sub DBload(q As String)";
+ //BA.debugLineNum = 103;BA.debugLine="Private condition As String";
 _condition = "";
- //BA.debugLineNum = 103;BA.debugLine="q=q.Trim";
+ //BA.debugLineNum = 104;BA.debugLine="q=q.Trim";
 _q = _q.trim();
- //BA.debugLineNum = 104;BA.debugLine="condition=\"WHERE name LIKE '%\" & q & \"%'\"";
+ //BA.debugLineNum = 105;BA.debugLine="condition=\"WHERE name LIKE '%\" & q & \"%'\"";
 _condition = "WHERE name LIKE '%"+_q+"%'";
- //BA.debugLineNum = 106;BA.debugLine="clv2.initialize(Me, \"clv2\")";
+ //BA.debugLineNum = 107;BA.debugLine="clv2.initialize(Me, \"clv2\")";
 mostCurrent._clv2._initialize(mostCurrent.activityBA,main2.getObject(),"clv2");
- //BA.debugLineNum = 107;BA.debugLine="Activity.addview(clv2.asview,0,20%y,100%x,80%y)";
+ //BA.debugLineNum = 108;BA.debugLine="Activity.addview(clv2.asview,0,20%y,100%x,80%y)";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._clv2._asview().getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (20),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (80),mostCurrent.activityBA));
- //BA.debugLineNum = 108;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem \" & condition";
+ //BA.debugLineNum = 109;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem \" & condition";
 mostCurrent._c1.setObject((android.database.Cursor)(_sq.ExecQuery("SELECT * FROM bem "+_condition)));
- //BA.debugLineNum = 110;BA.debugLine="Dim p1 As Panel";
+ //BA.debugLineNum = 111;BA.debugLine="Dim p1 As Panel";
 _p1 = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 111;BA.debugLine="For i=0 To c1.RowCount-1";
+ //BA.debugLineNum = 112;BA.debugLine="For i=0 To c1.RowCount-1";
 {
 final int step71 = 1;
 final int limit71 = (int) (mostCurrent._c1.getRowCount()-1);
 for (_i = (int) (0); (step71 > 0 && _i <= limit71) || (step71 < 0 && _i >= limit71); _i = ((int)(0 + _i + step71))) {
- //BA.debugLineNum = 112;BA.debugLine="p1.initialize(\"\")";
+ //BA.debugLineNum = 113;BA.debugLine="p1.initialize(\"\")";
 _p1.Initialize(mostCurrent.activityBA,"");
- //BA.debugLineNum = 113;BA.debugLine="p1.loadlayout(\"f\")";
+ //BA.debugLineNum = 114;BA.debugLine="p1.loadlayout(\"f\")";
 _p1.LoadLayout("f",mostCurrent.activityBA);
- //BA.debugLineNum = 114;BA.debugLine="c1.Position = i";
+ //BA.debugLineNum = 115;BA.debugLine="c1.Position = i";
 mostCurrent._c1.setPosition(_i);
- //BA.debugLineNum = 115;BA.debugLine="Label1.text=\"حرفه:\"&c1.getstring(\"name\")";
+ //BA.debugLineNum = 116;BA.debugLine="Label1.text=\"حرفه:\"&c1.getstring(\"name\")";
 mostCurrent._label1.setText((Object)("حرفه:"+mostCurrent._c1.GetString("name")));
- //BA.debugLineNum = 116;BA.debugLine="Label2.text=\"مدیریت:\"&c1.getstring(\"fnam\")";
+ //BA.debugLineNum = 117;BA.debugLine="Label2.text=\"مدیریت:\"&c1.getstring(\"fnam\")";
 mostCurrent._label2.setText((Object)("مدیریت:"+mostCurrent._c1.GetString("fnam")));
- //BA.debugLineNum = 117;BA.debugLine="Label3.text=\"تلفن:\"&c1.getstring(\"tel\")";
+ //BA.debugLineNum = 118;BA.debugLine="Label3.text=\"تلفن:\"&c1.getstring(\"tel\")";
 mostCurrent._label3.setText((Object)("تلفن:"+mostCurrent._c1.GetString("tel")));
- //BA.debugLineNum = 118;BA.debugLine="Label4.text=\"آدرس:\"&c1.getstring(\"address\")";
+ //BA.debugLineNum = 119;BA.debugLine="Label4.text=\"آدرس:\"&c1.getstring(\"address\")";
 mostCurrent._label4.setText((Object)("آدرس:"+mostCurrent._c1.GetString("address")));
- //BA.debugLineNum = 119;BA.debugLine="clv2.add(p1,30%y,i)";
+ //BA.debugLineNum = 120;BA.debugLine="clv2.add(p1,30%y,i)";
 mostCurrent._clv2._add(_p1,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (30),mostCurrent.activityBA),(Object)(_i));
- //BA.debugLineNum = 120;BA.debugLine="If i mod 2=0 Then";
+ //BA.debugLineNum = 121;BA.debugLine="If i mod 2=0 Then";
 if (_i%2==0) { 
- //BA.debugLineNum = 121;BA.debugLine="Panel1.Color=Colors.RGB(100,149,237)";
-mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (100),(int) (149),(int) (237)));
+ //BA.debugLineNum = 122;BA.debugLine="Panel1.Color=Colors.RGB(70,130,80)";
+mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (70),(int) (130),(int) (80)));
  }else {
- //BA.debugLineNum = 123;BA.debugLine="Panel1.Color=Colors.RGB(30,144,255)";
-mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (30),(int) (144),(int) (255)));
+ //BA.debugLineNum = 124;BA.debugLine="Panel1.Color=Colors.RGB(176,196,222)";
+mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (176),(int) (196),(int) (222)));
  };
  }
 };
- //BA.debugLineNum = 126;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
+ //BA.debugLineNum = 127;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
 final anywheresoftware.b4a.BA.IterableList group86 = mostCurrent._activity.GetAllViewsRecursive();
 final int groupLen86 = group86.getSize();
 for (int index86 = 0;index86 < groupLen86 ;index86++){
 _view1.setObject((android.view.View)(group86.Get(index86)));
- //BA.debugLineNum = 127;BA.debugLine="If view1 Is Label Then";
+ //BA.debugLineNum = 128;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
- //BA.debugLineNum = 128;BA.debugLine="Dim Label1 As Label";
+ //BA.debugLineNum = 129;BA.debugLine="Dim Label1 As Label";
 mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 129;BA.debugLine="Label1 = view1";
+ //BA.debugLineNum = 130;BA.debugLine="Label1 = view1";
 mostCurrent._label1.setObject((android.widget.TextView)(_view1.getObject()));
- //BA.debugLineNum = 130;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
+ //BA.debugLineNum = 131;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
 mostCurrent._label1.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.LoadFromAssets("yekan.ttf"));
- //BA.debugLineNum = 131;BA.debugLine="Label1.TextColor=Colors.Black";
+ //BA.debugLineNum = 132;BA.debugLine="Label1.TextColor=Colors.Black";
 mostCurrent._label1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  };
  }
 ;
- //BA.debugLineNum = 136;BA.debugLine="End Sub";
+ //BA.debugLineNum = 137;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext1_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 139;BA.debugLine="Sub EditText1_TextChanged (Old As String, New As S";
- //BA.debugLineNum = 140;BA.debugLine="DBload(New)";
+ //BA.debugLineNum = 140;BA.debugLine="Sub EditText1_TextChanged (Old As String, New As S";
+ //BA.debugLineNum = 141;BA.debugLine="DBload(New)";
 _dbload(_new);
- //BA.debugLineNum = 141;BA.debugLine="End Sub";
+ //BA.debugLineNum = 142;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -544,8 +545,6 @@ public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 7;BA.debugLine="Dim sq As SQL";
 _sq = new anywheresoftware.b4a.sql.SQL();
- //BA.debugLineNum = 8;BA.debugLine="Dim s As String";
-_s = "";
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }

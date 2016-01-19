@@ -40,18 +40,14 @@ views.get("label5").vw.setHeight((int)((12d / 100 * height)));
 views.get("label5").vw.setWidth((int)((25d / 100 * width)));
 views.get("label5").vw.setLeft((int)((72d / 100 * width)));
 views.get("button1").vw.setTop((int)((views.get("label5").vw.getTop())+(5d / 100 * height)+(views.get("label5").vw.getHeight())));
-views.get("button1").vw.setLeft((int)((52d / 100 * width)));
-views.get("button1").vw.setWidth((int)((46d / 100 * width)));
-//BA.debugLineNum = 42;BA.debugLine="Button1.Height=7%y"[sbank/General script]
-views.get("button1").vw.setHeight((int)((7d / 100 * height)));
-//BA.debugLineNum = 44;BA.debugLine="Button2.Top=Label5.Top+Label5.Height+5%y"[sbank/General script]
+views.get("button1").vw.setWidth((int)((35d / 100 * width)));
+views.get("button1").vw.setHeight((int)((10d / 100 * height)));
+views.get("button1").vw.setLeft((int)((10d / 100 * width)));
 views.get("button2").vw.setTop((int)((views.get("label5").vw.getTop())+(views.get("label5").vw.getHeight())+(5d / 100 * height)));
-//BA.debugLineNum = 45;BA.debugLine="Button2.Left=2%x"[sbank/General script]
-views.get("button2").vw.setLeft((int)((2d / 100 * width)));
-//BA.debugLineNum = 46;BA.debugLine="Button2.Width=46%x"[sbank/General script]
-views.get("button2").vw.setWidth((int)((46d / 100 * width)));
-//BA.debugLineNum = 47;BA.debugLine="Button2.Height=7%y"[sbank/General script]
-views.get("button2").vw.setHeight((int)((7d / 100 * height)));
+views.get("button2").vw.setHeight((int)((10d / 100 * height)));
+views.get("button2").vw.setWidth((int)((35d / 100 * width)));
+//BA.debugLineNum = 47;BA.debugLine="Button2.Left=60%x"[sbank/General script]
+views.get("button2").vw.setLeft((int)((60d / 100 * width)));
 //BA.debugLineNum = 49;BA.debugLine="EditText1.Top=Label1.Top+1%y+Label1.Height"[sbank/General script]
 views.get("edittext1").vw.setTop((int)((views.get("label1").vw.getTop())+(1d / 100 * height)+(views.get("label1").vw.getHeight())));
 //BA.debugLineNum = 50;BA.debugLine="EditText1.Height=12%y"[sbank/General script]

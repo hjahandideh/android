@@ -15,7 +15,8 @@ Dim s As String
 End Sub
 
 Sub Globals
-Dim n As Notification
+
+	Dim rowcount As Int
 	Dim sm As SlideMenu
 	Private btnshow As Button
 	Private EditText1 As EditText
@@ -27,7 +28,7 @@ Dim n As Notification
 	Private Label2 As Label
 	Private Label3 As Label
 	Private Label4 As Label
-	Dim rowcount,t As Int
+	
 	Private Label7 As Label
 End Sub
 
@@ -65,8 +66,7 @@ End If
 
 ht.PostString("http://bemq.ir/check.php","")
 	
-	
-	
+
 
 EditText1.TextColor=Colors.White
 
@@ -79,6 +79,8 @@ Label1.TextColor=Colors.Black
 
 End If
 Next	
+	
+
 	  
 End Sub
 
@@ -94,10 +96,13 @@ Sub jobdone (job As HttpJob)
 					
 					If job.GetString > rowcount Then
 						
+					
+					
 						c1 = sq.ExecQuery("SELECT * FROM bem")
 						rowcount = c1.RowCount
 						
 						ht2.PostString("http://bemq.ir/getcontent.php","tedad="& rowcount &"")
+						
 						
 						
 					Else
@@ -142,7 +147,7 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
   If KeyCode = KeyCodes.KEYCODE_BACK Then                         
       answ=Msgbox2("آیا می خواهید خارج شوید","خروج از برنامه","بله","","خیر",Null)
              If answ=DialogResponse.POSITIVE Then
-                
+                Main.n.Cancel(1)
 				Activity.Finish
 				ExitApplication
                 Else
@@ -172,10 +177,10 @@ Dim p1 As Panel
 		Label3.text="تلفن:"&c1.getstring("tel")
 		Label4.text="آدرس:"&c1.getstring("address")
 		clv2.add(p1,30%y,i)
- 		If i mod 2=0 Then
-			Panel1.Color=Colors.LightGray
+ 			If i mod 2=0 Then
+			Panel1.Color=Colors.RGB(70,130,80)
 		Else
-			Panel1.Color=Colors.White
+			Panel1.Color=Colors.RGB(176,196,222)
 		End If
 Next
 For Each view1 As View In Activity.getallviewsrecursive

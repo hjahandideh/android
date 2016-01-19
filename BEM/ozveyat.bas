@@ -18,14 +18,14 @@ Sub Globals
 	
 	Dim ht As HttpJob
 	
-
+	
 	Private Button1 As Button
 	Private Button2 As Button
 	Private EditText1 As EditText
 	Private EditText2 As EditText
 	Private Label1 As Label
 	Private Label2 As Label
-	Dim c2 As Cursor
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -72,7 +72,7 @@ Sub Button1_click
 Dim go As String
 go = "&username="&EditText1.Text&"&pass="&EditText2.Text
 	ht.PostString("http://bemq.ir/read_vorood.php",go)
-
+ProgressDialogShow("Please Wait ...")
 main3.s=EditText1.Text
 
 End Sub
@@ -88,4 +88,11 @@ End Sub
 Sub Button2_click
 StartActivity("vorood")
 Activity.Finish
+End Sub
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+  If KeyCode = KeyCodes.KEYCODE_BACK Then                          
+      StartActivity(main2)
+         Activity.Finish                                         
+  
+   End If
 End Sub

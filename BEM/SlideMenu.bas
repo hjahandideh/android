@@ -45,7 +45,7 @@ Sub Initialize(Activity As Activity, Module As Object, EventName As String, Top 
 	mListView.TwoLinesAndBitmap.Label.Height = mListView.TwoLinesAndBitmap.ItemHeight
 	mListView.TwoLinesAndBitmap.Label.Top = 0
 	mListView.TwoLinesAndBitmap.ImageView.SetLayout(13dip, 13dip, 24dip, 24dip)
-	mListView.Color = Colors.RGB(30, 144, 225)
+	mListView.Color = Colors.RGB(39, 153, 202)
    mListView.TwoLinesAndBitmap.Label.Typeface=Typeface.LoadFromAssets("yekan.ttf")
 	mInAnimation.InitializeTranslate("", -Width, 0, 0, 0)
 	mInAnimation.Duration = 200
@@ -132,10 +132,10 @@ If Value=2 Then
              If answ=DialogResponse.POSITIVE Then
 			
                 ExitApplication
+				Main.n.Cancel(1)
 				
                 Else
-				
-            StartActivity(main2)
+			
 			Hide
            End If                                            
      End If
@@ -143,6 +143,7 @@ If Value=2 Then
 	
 	StartActivity(main2)
 	ExitApplication
+	
 	End If
 If Value=6 Then
 	

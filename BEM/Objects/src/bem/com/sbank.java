@@ -370,15 +370,15 @@ mostCurrent._ht._initialize(processBA,"Register",sbank.getObject());
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 103;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 103;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 104;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 104;BA.debugLine="StartActivity(main3)";
+ //BA.debugLineNum = 105;BA.debugLine="StartActivity(main3)";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._main3.getObject()));
- //BA.debugLineNum = 105;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 107;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
  };
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
+ //BA.debugLineNum = 110;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -411,7 +411,7 @@ public static String  _button2_click() throws Exception{
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._main3.getObject()));
  //BA.debugLineNum = 98;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{

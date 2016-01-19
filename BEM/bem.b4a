@@ -48,7 +48,7 @@ Library11=customnotification
 #End Region
 
 Sub Process_Globals
-	
+	Dim n As Notification
 End Sub
 
 Sub Globals
@@ -64,7 +64,11 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("main")
-
+	
+n.Initialize
+n.Icon="icon"
+n.SetInfo("جستجوی حرفه ","ویژه جستجو حرفه در قاین",main2)
+n.Notify(1)
 
 For Each view1 As View In Activity.getallviewsrecursive
 

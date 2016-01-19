@@ -98,15 +98,17 @@ Dim go As String
 End Sub
 
 Sub Button2_Click
-	
+
 	 StartActivity(main3)	 
 	 Activity.Finish
+	 	
 End Sub
 
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
   If KeyCode = KeyCodes.KEYCODE_BACK Then                          
       StartActivity(main3)
+	
          Activity.Finish                                         
   
    End If

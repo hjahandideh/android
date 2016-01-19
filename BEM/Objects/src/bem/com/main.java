@@ -307,6 +307,7 @@ public class main extends Activity implements B4AActivity{
 	}
 
 public anywheresoftware.b4a.keywords.Common __c = null;
+public static anywheresoftware.b4a.objects.NotificationWrapper _n = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _imageview1 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label2 = null;
@@ -339,34 +340,42 @@ anywheresoftware.b4a.objects.ConcreteViewWrapper _view1 = null;
  //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 31;BA.debugLine="Activity.LoadLayout(\"main\")";
 mostCurrent._activity.LoadLayout("main",mostCurrent.activityBA);
- //BA.debugLineNum = 34;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
+ //BA.debugLineNum = 33;BA.debugLine="n.Initialize";
+_n.Initialize();
+ //BA.debugLineNum = 34;BA.debugLine="n.Icon=\"icon\"";
+_n.setIcon("icon");
+ //BA.debugLineNum = 35;BA.debugLine="n.SetInfo(\"جستجوی حرفه \",\"ویژه جستجو حرفه در قاین\"";
+_n.SetInfo(processBA,"جستجوی حرفه ","ویژه جستجو حرفه در قاین",(Object)(mostCurrent._main2.getObject()));
+ //BA.debugLineNum = 36;BA.debugLine="n.Notify(1)";
+_n.Notify((int) (1));
+ //BA.debugLineNum = 38;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
-final anywheresoftware.b4a.BA.IterableList group11 = mostCurrent._activity.GetAllViewsRecursive();
-final int groupLen11 = group11.getSize();
-for (int index11 = 0;index11 < groupLen11 ;index11++){
-_view1.setObject((android.view.View)(group11.Get(index11)));
- //BA.debugLineNum = 36;BA.debugLine="If view1 Is Label Then";
+final anywheresoftware.b4a.BA.IterableList group16 = mostCurrent._activity.GetAllViewsRecursive();
+final int groupLen16 = group16.getSize();
+for (int index16 = 0;index16 < groupLen16 ;index16++){
+_view1.setObject((android.view.View)(group16.Get(index16)));
+ //BA.debugLineNum = 40;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
- //BA.debugLineNum = 38;BA.debugLine="Dim Label1 As Label";
+ //BA.debugLineNum = 42;BA.debugLine="Dim Label1 As Label";
 mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 40;BA.debugLine="Label1 = view1";
+ //BA.debugLineNum = 44;BA.debugLine="Label1 = view1";
 mostCurrent._label1.setObject((android.widget.TextView)(_view1.getObject()));
- //BA.debugLineNum = 42;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
+ //BA.debugLineNum = 46;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
 mostCurrent._label1.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.LoadFromAssets("yekan.ttf"));
  };
  }
 ;
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+ //BA.debugLineNum = 54;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 58;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 60;BA.debugLine="End Sub";
+ //BA.debugLineNum = 62;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 54;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 56;BA.debugLine="End Sub";
+ //BA.debugLineNum = 58;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -385,12 +394,12 @@ mostCurrent._label4 = new anywheresoftware.b4a.objects.LabelWrapper();
 return "";
 }
 public static String  _imageview1_click() throws Exception{
- //BA.debugLineNum = 64;BA.debugLine="Sub ImageView1_Click";
- //BA.debugLineNum = 65;BA.debugLine="StartActivity(\"main2\")";
+ //BA.debugLineNum = 68;BA.debugLine="Sub ImageView1_Click";
+ //BA.debugLineNum = 69;BA.debugLine="StartActivity(\"main2\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)("main2"));
- //BA.debugLineNum = 66;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 70;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 67;BA.debugLine="End Sub";
+ //BA.debugLineNum = 71;BA.debugLine="End Sub";
 return "";
 }
 
@@ -416,6 +425,8 @@ about1._process_globals();
     }
 }public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Dim n As Notification";
+_n = new anywheresoftware.b4a.objects.NotificationWrapper();
  //BA.debugLineNum = 17;BA.debugLine="End Sub";
 return "";
 }

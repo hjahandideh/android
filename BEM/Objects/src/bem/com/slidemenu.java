@@ -145,8 +145,8 @@ _mlistview.getTwoLinesAndBitmap().Label.setHeight(_mlistview.getTwoLinesAndBitma
 _mlistview.getTwoLinesAndBitmap().Label.setTop((int) (0));
  //BA.debugLineNum = 42;BA.debugLine="mListView.TwoLinesAndBitmap.ImageView.SetLayout(1";
 _mlistview.getTwoLinesAndBitmap().ImageView.SetLayout(__c.DipToCurrent((int) (13)),__c.DipToCurrent((int) (13)),__c.DipToCurrent((int) (24)),__c.DipToCurrent((int) (24)));
- //BA.debugLineNum = 43;BA.debugLine="mListView.Color = Colors.RGB(30, 144, 225)";
-_mlistview.setColor(__c.Colors.RGB((int) (30),(int) (144),(int) (225)));
+ //BA.debugLineNum = 43;BA.debugLine="mListView.Color = Colors.RGB(39, 153, 202)";
+_mlistview.setColor(__c.Colors.RGB((int) (39),(int) (153),(int) (202)));
  //BA.debugLineNum = 44;BA.debugLine="mListView.TwoLinesAndBitmap.Label.Typeface=Type";
 _mlistview.getTwoLinesAndBitmap().Label.setTypeface(__c.Typeface.LoadFromAssets("yekan.ttf"));
  //BA.debugLineNum = 45;BA.debugLine="mInAnimation.InitializeTranslate(\"\", -Width, 0, 0";
@@ -171,10 +171,10 @@ _mslidepanel.setVisible(__c.False);
 return "";
 }
 public boolean  _isvisible() throws Exception{
- //BA.debugLineNum = 150;BA.debugLine="Public Sub isVisible As Boolean";
- //BA.debugLineNum = 151;BA.debugLine="Return mSlidePanel.Visible";
+ //BA.debugLineNum = 151;BA.debugLine="Public Sub isVisible As Boolean";
+ //BA.debugLineNum = 152;BA.debugLine="Return mSlidePanel.Visible";
 if (true) return _mslidepanel.getVisible();
- //BA.debugLineNum = 152;BA.debugLine="End Sub";
+ //BA.debugLineNum = 153;BA.debugLine="End Sub";
 return false;
 }
 public String  _mbackpanel_touch(int _action,float _x,float _y) throws Exception{
@@ -221,9 +221,9 @@ _answ = __c.Msgbox2("آیا می خواهید خارج شوید","خروج از 
 if (_answ==__c.DialogResponse.POSITIVE) { 
  //BA.debugLineNum = 129;BA.debugLine="ExitApplication";
 __c.ExitApplication();
+ //BA.debugLineNum = 130;BA.debugLine="Main.n.Cancel(1)";
+_main._n.Cancel((int) (1));
  }else {
- //BA.debugLineNum = 133;BA.debugLine="StartActivity(main2)";
-__c.StartActivity(ba,(Object)(_main2.getObject()));
  //BA.debugLineNum = 134;BA.debugLine="Hide";
 _hide();
  };
@@ -235,14 +235,14 @@ __c.StartActivity(ba,(Object)(_main2.getObject()));
  //BA.debugLineNum = 140;BA.debugLine="ExitApplication";
 __c.ExitApplication();
  };
- //BA.debugLineNum = 142;BA.debugLine="If Value=6 Then";
+ //BA.debugLineNum = 143;BA.debugLine="If Value=6 Then";
 if ((_value).equals((Object)(6))) { 
- //BA.debugLineNum = 144;BA.debugLine="StartActivity(about)";
+ //BA.debugLineNum = 145;BA.debugLine="StartActivity(about)";
 __c.StartActivity(ba,(Object)(_about.getObject()));
- //BA.debugLineNum = 145;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 146;BA.debugLine="ExitApplication";
 __c.ExitApplication();
  };
- //BA.debugLineNum = 147;BA.debugLine="End Sub";
+ //BA.debugLineNum = 148;BA.debugLine="End Sub";
 return "";
 }
 public String  _out_animationend() throws Exception{

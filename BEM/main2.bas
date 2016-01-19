@@ -10,7 +10,7 @@ B4A=true
 
 Sub Process_Globals
 	Dim sq As SQL
-Dim s As String
+
 	
 End Sub
 
@@ -95,6 +95,7 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
                 
 				Activity.Finish
 				ExitApplication
+				Main.n.Cancel(1)
                 Else
             Return True
            End If                                            
@@ -123,9 +124,9 @@ Dim p1 As Panel
 		Label4.text="آدرس:"&c1.getstring("address")
 		clv2.add(p1,30%y,i)
  		If i mod 2=0 Then
-			Panel1.Color=Colors.RGB(100,149,237)
+			Panel1.Color=Colors.RGB(70,130,80)
 		Else
-			Panel1.Color=Colors.RGB(30,144,255)
+			Panel1.Color=Colors.RGB(176,196,222)
 		End If
 Next
 For Each view1 As View In Activity.getallviewsrecursive

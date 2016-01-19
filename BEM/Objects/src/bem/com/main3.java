@@ -309,7 +309,7 @@ public class main3 extends Activity implements B4AActivity{
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.sql.SQL _sq = null;
 public static String _s = "";
-public anywheresoftware.b4a.objects.NotificationWrapper _n = null;
+public static int _rowcount = 0;
 public bem.com.slidemenu _sm = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btnshow = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext1 = null;
@@ -322,8 +322,6 @@ public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label2 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label3 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label4 = null;
-public static int _rowcount = 0;
-public static int _t = 0;
 public anywheresoftware.b4a.objects.LabelWrapper _label7 = null;
 public b4a.example.scond _scond = null;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
@@ -344,49 +342,49 @@ public static void initializeProcessGlobals() {
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
 anywheresoftware.b4a.objects.ConcreteViewWrapper _view1 = null;
- //BA.debugLineNum = 29;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 30;BA.debugLine="Activity.LoadLayout(\"d\")";
+ //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 31;BA.debugLine="Activity.LoadLayout(\"d\")";
 mostCurrent._activity.LoadLayout("d",mostCurrent.activityBA);
- //BA.debugLineNum = 32;BA.debugLine="ht.Initialize(\"job1\",Me)";
+ //BA.debugLineNum = 33;BA.debugLine="ht.Initialize(\"job1\",Me)";
 mostCurrent._ht._initialize(processBA,"job1",main3.getObject());
- //BA.debugLineNum = 33;BA.debugLine="ht2.Initialize(\"job2\",Me)";
+ //BA.debugLineNum = 34;BA.debugLine="ht2.Initialize(\"job2\",Me)";
 mostCurrent._ht2._initialize(processBA,"job2",main3.getObject());
- //BA.debugLineNum = 36;BA.debugLine="sm.Initialize(Activity,Me,\"SlideMenu\",42dip,180dip";
+ //BA.debugLineNum = 37;BA.debugLine="sm.Initialize(Activity,Me,\"SlideMenu\",42dip,180dip";
 mostCurrent._sm._initialize(mostCurrent.activityBA,mostCurrent._activity,main3.getObject(),"SlideMenu",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (42)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (180)));
- //BA.debugLineNum = 38;BA.debugLine="sm.AddItem(\"کاربر:\"&s,LoadBitmap(File.DirAssets,\"u";
+ //BA.debugLineNum = 39;BA.debugLine="sm.AddItem(\"کاربر:\"&s,LoadBitmap(File.DirAssets,\"u";
 mostCurrent._sm._additem("کاربر:"+_s,anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"u.png"),(Object)(0));
- //BA.debugLineNum = 39;BA.debugLine="sm.AddItem(\"ثبت شغل جدید\",LoadBitmap(File.DirAsse";
+ //BA.debugLineNum = 40;BA.debugLine="sm.AddItem(\"ثبت شغل جدید\",LoadBitmap(File.DirAsse";
 mostCurrent._sm._additem("ثبت شغل جدید",anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"a.jpg"),(Object)(1));
- //BA.debugLineNum = 40;BA.debugLine="sm.AddItem(\"خروج کاربر\",LoadBitmap(File.DirAssets";
+ //BA.debugLineNum = 41;BA.debugLine="sm.AddItem(\"خروج کاربر\",LoadBitmap(File.DirAssets";
 mostCurrent._sm._additem("خروج کاربر",anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"s.png"),(Object)(5));
- //BA.debugLineNum = 42;BA.debugLine="sm.AddItem(\"درباره ما\",LoadBitmap(File.DirAsset";
+ //BA.debugLineNum = 43;BA.debugLine="sm.AddItem(\"درباره ما\",LoadBitmap(File.DirAsset";
 mostCurrent._sm._additem("درباره ما",anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"u.png"),(Object)(6));
- //BA.debugLineNum = 43;BA.debugLine="sm.AddItem(\"خروج\",LoadBitmap(File.DirAssets,\"d.";
+ //BA.debugLineNum = 44;BA.debugLine="sm.AddItem(\"خروج\",LoadBitmap(File.DirAssets,\"d.";
 mostCurrent._sm._additem("خروج",anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"d.jpg"),(Object)(4));
- //BA.debugLineNum = 48;BA.debugLine="EditText1.Color=Colors.RGB(242,242,242)";
+ //BA.debugLineNum = 49;BA.debugLine="EditText1.Color=Colors.RGB(242,242,242)";
 mostCurrent._edittext1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (242),(int) (242),(int) (242)));
- //BA.debugLineNum = 49;BA.debugLine="EditText1.TextColor=Colors.Black";
+ //BA.debugLineNum = 50;BA.debugLine="EditText1.TextColor=Colors.Black";
 mostCurrent._edittext1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 53;BA.debugLine="If File.Exists(File.DirInternal,\"bemdb.db\") = Fals";
+ //BA.debugLineNum = 54;BA.debugLine="If File.Exists(File.DirInternal,\"bemdb.db\") = Fals";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"bemdb.db")==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 54;BA.debugLine="File.Copy(File.DirAssets,\"bemdb.db\",File.DirIntern";
+ //BA.debugLineNum = 55;BA.debugLine="File.Copy(File.DirAssets,\"bemdb.db\",File.DirIntern";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bemdb.db",anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"bemdb.db");
  };
- //BA.debugLineNum = 56;BA.debugLine="If sq.IsInitialized = False Then";
+ //BA.debugLineNum = 57;BA.debugLine="If sq.IsInitialized = False Then";
 if (_sq.IsInitialized()==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 57;BA.debugLine="sq.Initialize(File.DirInternal, \"bemdb.db\", False)";
+ //BA.debugLineNum = 58;BA.debugLine="sq.Initialize(File.DirInternal, \"bemdb.db\", False)";
 _sq.Initialize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"bemdb.db",anywheresoftware.b4a.keywords.Common.False);
  };
- //BA.debugLineNum = 61;BA.debugLine="ht.PostString(\"http://bemq.ir/check.php\",\"\")";
+ //BA.debugLineNum = 62;BA.debugLine="ht.PostString(\"http://bemq.ir/check.php\",\"\")";
 mostCurrent._ht._poststring("http://bemq.ir/check.php","");
  //BA.debugLineNum = 66;BA.debugLine="EditText1.TextColor=Colors.White";
 mostCurrent._edittext1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
  //BA.debugLineNum = 68;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
-final anywheresoftware.b4a.BA.IterableList group40 = mostCurrent._activity.GetAllViewsRecursive();
-final int groupLen40 = group40.getSize();
-for (int index40 = 0;index40 < groupLen40 ;index40++){
-_view1.setObject((android.view.View)(group40.Get(index40)));
+final anywheresoftware.b4a.BA.IterableList group39 = mostCurrent._activity.GetAllViewsRecursive();
+final int groupLen39 = group39.getSize();
+for (int index39 = 0;index39 < groupLen39 ;index39++){
+_view1.setObject((android.view.View)(group39.Get(index39)));
  //BA.debugLineNum = 69;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
  //BA.debugLineNum = 70;BA.debugLine="Dim Label1 As Label";
@@ -400,50 +398,52 @@ mostCurrent._label1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Bla
  };
  }
 ;
- //BA.debugLineNum = 78;BA.debugLine="End Sub";
+ //BA.debugLineNum = 80;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
 int _answ = 0;
- //BA.debugLineNum = 135;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 136;BA.debugLine="Dim  answ As Int";
+ //BA.debugLineNum = 140;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 141;BA.debugLine="Dim  answ As Int";
 _answ = 0;
- //BA.debugLineNum = 137;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+ //BA.debugLineNum = 142;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 138;BA.debugLine="answ=Msgbox2(\"آیا می خواهید خارج شوید\",\"خروج";
+ //BA.debugLineNum = 143;BA.debugLine="answ=Msgbox2(\"آیا می خواهید خارج شوید\",\"خروج";
 _answ = anywheresoftware.b4a.keywords.Common.Msgbox2("آیا می خواهید خارج شوید","خروج از برنامه","بله","","خیر",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),mostCurrent.activityBA);
- //BA.debugLineNum = 139;BA.debugLine="If answ=DialogResponse.POSITIVE Then";
+ //BA.debugLineNum = 144;BA.debugLine="If answ=DialogResponse.POSITIVE Then";
 if (_answ==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) { 
- //BA.debugLineNum = 141;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 145;BA.debugLine="Main.n.Cancel(1)";
+mostCurrent._main._n.Cancel((int) (1));
+ //BA.debugLineNum = 146;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 142;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 147;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  }else {
- //BA.debugLineNum = 144;BA.debugLine="Return True";
+ //BA.debugLineNum = 149;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  };
  }else {
- //BA.debugLineNum = 147;BA.debugLine="Return False";
+ //BA.debugLineNum = 152;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 149;BA.debugLine="End Sub";
+ //BA.debugLineNum = 154;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 129;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 131;BA.debugLine="End Sub";
+ //BA.debugLineNum = 134;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 136;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 125;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 127;BA.debugLine="End Sub";
+ //BA.debugLineNum = 130;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 132;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btnshow_click() throws Exception{
- //BA.debugLineNum = 132;BA.debugLine="Sub btnshow_click";
- //BA.debugLineNum = 133;BA.debugLine="sm.Show";
+ //BA.debugLineNum = 137;BA.debugLine="Sub btnshow_click";
+ //BA.debugLineNum = 138;BA.debugLine="sm.Show";
 mostCurrent._sm._show();
- //BA.debugLineNum = 134;BA.debugLine="End Sub";
+ //BA.debugLineNum = 139;BA.debugLine="End Sub";
 return "";
 }
 public static String  _dbload(String _q) throws Exception{
@@ -451,168 +451,165 @@ String _condition = "";
 anywheresoftware.b4a.objects.PanelWrapper _p1 = null;
 int _i = 0;
 anywheresoftware.b4a.objects.ConcreteViewWrapper _view1 = null;
- //BA.debugLineNum = 150;BA.debugLine="Sub DBload(q As String)";
- //BA.debugLineNum = 152;BA.debugLine="Private condition As String";
+ //BA.debugLineNum = 155;BA.debugLine="Sub DBload(q As String)";
+ //BA.debugLineNum = 157;BA.debugLine="Private condition As String";
 _condition = "";
- //BA.debugLineNum = 153;BA.debugLine="q=q.Trim";
+ //BA.debugLineNum = 158;BA.debugLine="q=q.Trim";
 _q = _q.trim();
- //BA.debugLineNum = 154;BA.debugLine="condition=\"WHERE name LIKE '%\" & q & \"%'\"";
+ //BA.debugLineNum = 159;BA.debugLine="condition=\"WHERE name LIKE '%\" & q & \"%'\"";
 _condition = "WHERE name LIKE '%"+_q+"%'";
- //BA.debugLineNum = 156;BA.debugLine="clv2.initialize(Me, \"clv2\")";
+ //BA.debugLineNum = 161;BA.debugLine="clv2.initialize(Me, \"clv2\")";
 mostCurrent._clv2._initialize(mostCurrent.activityBA,main3.getObject(),"clv2");
- //BA.debugLineNum = 157;BA.debugLine="Activity.addview(clv2.asview,0,20%y,100%x,80%y)";
+ //BA.debugLineNum = 162;BA.debugLine="Activity.addview(clv2.asview,0,20%y,100%x,80%y)";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._clv2._asview().getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (20),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (80),mostCurrent.activityBA));
- //BA.debugLineNum = 158;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem \" & condition";
+ //BA.debugLineNum = 163;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem \" & condition";
 mostCurrent._c1.setObject((android.database.Cursor)(_sq.ExecQuery("SELECT * FROM bem "+_condition)));
- //BA.debugLineNum = 160;BA.debugLine="Dim p1 As Panel";
+ //BA.debugLineNum = 165;BA.debugLine="Dim p1 As Panel";
 _p1 = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 161;BA.debugLine="For i=0 To c1.RowCount-1";
+ //BA.debugLineNum = 166;BA.debugLine="For i=0 To c1.RowCount-1";
 {
 final int step105 = 1;
 final int limit105 = (int) (mostCurrent._c1.getRowCount()-1);
 for (_i = (int) (0); (step105 > 0 && _i <= limit105) || (step105 < 0 && _i >= limit105); _i = ((int)(0 + _i + step105))) {
- //BA.debugLineNum = 162;BA.debugLine="p1.initialize(\"\")";
+ //BA.debugLineNum = 167;BA.debugLine="p1.initialize(\"\")";
 _p1.Initialize(mostCurrent.activityBA,"");
- //BA.debugLineNum = 163;BA.debugLine="p1.loadlayout(\"f\")";
+ //BA.debugLineNum = 168;BA.debugLine="p1.loadlayout(\"f\")";
 _p1.LoadLayout("f",mostCurrent.activityBA);
- //BA.debugLineNum = 164;BA.debugLine="c1.Position = i";
+ //BA.debugLineNum = 169;BA.debugLine="c1.Position = i";
 mostCurrent._c1.setPosition(_i);
- //BA.debugLineNum = 165;BA.debugLine="Label1.text=\"حرفه:\"&c1.getstring(\"name\")";
+ //BA.debugLineNum = 170;BA.debugLine="Label1.text=\"حرفه:\"&c1.getstring(\"name\")";
 mostCurrent._label1.setText((Object)("حرفه:"+mostCurrent._c1.GetString("name")));
- //BA.debugLineNum = 166;BA.debugLine="Label2.text=\"مدیریت:\"&c1.getstring(\"fnam\")";
+ //BA.debugLineNum = 171;BA.debugLine="Label2.text=\"مدیریت:\"&c1.getstring(\"fnam\")";
 mostCurrent._label2.setText((Object)("مدیریت:"+mostCurrent._c1.GetString("fnam")));
- //BA.debugLineNum = 167;BA.debugLine="Label3.text=\"تلفن:\"&c1.getstring(\"tel\")";
+ //BA.debugLineNum = 172;BA.debugLine="Label3.text=\"تلفن:\"&c1.getstring(\"tel\")";
 mostCurrent._label3.setText((Object)("تلفن:"+mostCurrent._c1.GetString("tel")));
- //BA.debugLineNum = 168;BA.debugLine="Label4.text=\"آدرس:\"&c1.getstring(\"address\")";
+ //BA.debugLineNum = 173;BA.debugLine="Label4.text=\"آدرس:\"&c1.getstring(\"address\")";
 mostCurrent._label4.setText((Object)("آدرس:"+mostCurrent._c1.GetString("address")));
- //BA.debugLineNum = 169;BA.debugLine="clv2.add(p1,30%y,i)";
+ //BA.debugLineNum = 174;BA.debugLine="clv2.add(p1,30%y,i)";
 mostCurrent._clv2._add(_p1,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (30),mostCurrent.activityBA),(Object)(_i));
- //BA.debugLineNum = 170;BA.debugLine="If i mod 2=0 Then";
+ //BA.debugLineNum = 175;BA.debugLine="If i mod 2=0 Then";
 if (_i%2==0) { 
- //BA.debugLineNum = 171;BA.debugLine="Panel1.Color=Colors.LightGray";
-mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.LightGray);
+ //BA.debugLineNum = 176;BA.debugLine="Panel1.Color=Colors.RGB(70,130,80)";
+mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (70),(int) (130),(int) (80)));
  }else {
- //BA.debugLineNum = 173;BA.debugLine="Panel1.Color=Colors.White";
-mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.White);
+ //BA.debugLineNum = 178;BA.debugLine="Panel1.Color=Colors.RGB(176,196,222)";
+mostCurrent._panel1.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (176),(int) (196),(int) (222)));
  };
  }
 };
- //BA.debugLineNum = 176;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
+ //BA.debugLineNum = 181;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
 final anywheresoftware.b4a.BA.IterableList group120 = mostCurrent._activity.GetAllViewsRecursive();
 final int groupLen120 = group120.getSize();
 for (int index120 = 0;index120 < groupLen120 ;index120++){
 _view1.setObject((android.view.View)(group120.Get(index120)));
- //BA.debugLineNum = 177;BA.debugLine="If view1 Is Label Then";
+ //BA.debugLineNum = 182;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
- //BA.debugLineNum = 178;BA.debugLine="Dim Label1 As Label";
+ //BA.debugLineNum = 183;BA.debugLine="Dim Label1 As Label";
 mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 179;BA.debugLine="Label1 = view1";
+ //BA.debugLineNum = 184;BA.debugLine="Label1 = view1";
 mostCurrent._label1.setObject((android.widget.TextView)(_view1.getObject()));
- //BA.debugLineNum = 180;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
+ //BA.debugLineNum = 185;BA.debugLine="Label1.typeface = Typeface.loadfromassets(\"yekan.t";
 mostCurrent._label1.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.LoadFromAssets("yekan.ttf"));
- //BA.debugLineNum = 181;BA.debugLine="Label1.TextColor=Colors.Black";
+ //BA.debugLineNum = 186;BA.debugLine="Label1.TextColor=Colors.Black";
 mostCurrent._label1.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  };
  }
 ;
- //BA.debugLineNum = 186;BA.debugLine="End Sub";
+ //BA.debugLineNum = 191;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edittext1_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 189;BA.debugLine="Sub EditText1_TextChanged (Old As String, New As S";
- //BA.debugLineNum = 190;BA.debugLine="DBload(New)";
+ //BA.debugLineNum = 194;BA.debugLine="Sub EditText1_TextChanged (Old As String, New As S";
+ //BA.debugLineNum = 195;BA.debugLine="DBload(New)";
 _dbload(_new);
- //BA.debugLineNum = 191;BA.debugLine="End Sub";
+ //BA.debugLineNum = 196;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
  //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 13;BA.debugLine="Dim n As Notification";
-mostCurrent._n = new anywheresoftware.b4a.objects.NotificationWrapper();
- //BA.debugLineNum = 14;BA.debugLine="Dim sm As SlideMenu";
+ //BA.debugLineNum = 14;BA.debugLine="Dim rowcount As Int";
+_rowcount = 0;
+ //BA.debugLineNum = 15;BA.debugLine="Dim sm As SlideMenu";
 mostCurrent._sm = new bem.com.slidemenu();
- //BA.debugLineNum = 15;BA.debugLine="Private btnshow As Button";
+ //BA.debugLineNum = 16;BA.debugLine="Private btnshow As Button";
 mostCurrent._btnshow = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 16;BA.debugLine="Private EditText1 As EditText";
+ //BA.debugLineNum = 17;BA.debugLine="Private EditText1 As EditText";
 mostCurrent._edittext1 = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 17;BA.debugLine="Dim clv2 As CustomListView";
+ //BA.debugLineNum = 18;BA.debugLine="Dim clv2 As CustomListView";
 mostCurrent._clv2 = new bem.com.customlistview();
- //BA.debugLineNum = 18;BA.debugLine="Dim c1 As Cursor";
+ //BA.debugLineNum = 19;BA.debugLine="Dim c1 As Cursor";
 mostCurrent._c1 = new anywheresoftware.b4a.sql.SQL.CursorWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Private Panel1 As Panel";
+ //BA.debugLineNum = 20;BA.debugLine="Private Panel1 As Panel";
 mostCurrent._panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 20;BA.debugLine="Dim ht,ht2 As HttpJob";
+ //BA.debugLineNum = 21;BA.debugLine="Dim ht,ht2 As HttpJob";
 mostCurrent._ht = new anywheresoftware.b4a.samples.httputils2.httpjob();
 mostCurrent._ht2 = new anywheresoftware.b4a.samples.httputils2.httpjob();
- //BA.debugLineNum = 21;BA.debugLine="Private Label1 As Label";
+ //BA.debugLineNum = 22;BA.debugLine="Private Label1 As Label";
 mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 22;BA.debugLine="Private Label2 As Label";
+ //BA.debugLineNum = 23;BA.debugLine="Private Label2 As Label";
 mostCurrent._label2 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 23;BA.debugLine="Private Label3 As Label";
+ //BA.debugLineNum = 24;BA.debugLine="Private Label3 As Label";
 mostCurrent._label3 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 24;BA.debugLine="Private Label4 As Label";
+ //BA.debugLineNum = 25;BA.debugLine="Private Label4 As Label";
 mostCurrent._label4 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 25;BA.debugLine="Dim rowcount,t As Int";
-_rowcount = 0;
-_t = 0;
- //BA.debugLineNum = 26;BA.debugLine="Private Label7 As Label";
+ //BA.debugLineNum = 27;BA.debugLine="Private Label7 As Label";
 mostCurrent._label7 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 27;BA.debugLine="End Sub";
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
 public static String  _jobdone(anywheresoftware.b4a.samples.httputils2.httpjob _job) throws Exception{
 String[] _str1 = null;
 int _i = 0;
 String[] _str2 = null;
- //BA.debugLineNum = 80;BA.debugLine="Sub jobdone (job As HttpJob)";
- //BA.debugLineNum = 84;BA.debugLine="If job.Success = True Then";
+ //BA.debugLineNum = 82;BA.debugLine="Sub jobdone (job As HttpJob)";
+ //BA.debugLineNum = 86;BA.debugLine="If job.Success = True Then";
 if (_job._success==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 85;BA.debugLine="If job.JobName = \"job1\" Then";
+ //BA.debugLineNum = 87;BA.debugLine="If job.JobName = \"job1\" Then";
 if ((_job._jobname).equals("job1")) { 
- //BA.debugLineNum = 87;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem\")";
+ //BA.debugLineNum = 89;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem\")";
 mostCurrent._c1.setObject((android.database.Cursor)(_sq.ExecQuery("SELECT * FROM bem")));
- //BA.debugLineNum = 88;BA.debugLine="rowcount = c1.RowCount";
+ //BA.debugLineNum = 90;BA.debugLine="rowcount = c1.RowCount";
 _rowcount = mostCurrent._c1.getRowCount();
- //BA.debugLineNum = 90;BA.debugLine="If job.GetString > rowcount Then";
+ //BA.debugLineNum = 92;BA.debugLine="If job.GetString > rowcount Then";
 if ((double)(Double.parseDouble(_job._getstring()))>_rowcount) { 
- //BA.debugLineNum = 92;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem\")";
+ //BA.debugLineNum = 96;BA.debugLine="c1 = sq.ExecQuery(\"SELECT * FROM bem\")";
 mostCurrent._c1.setObject((android.database.Cursor)(_sq.ExecQuery("SELECT * FROM bem")));
- //BA.debugLineNum = 93;BA.debugLine="rowcount = c1.RowCount";
+ //BA.debugLineNum = 97;BA.debugLine="rowcount = c1.RowCount";
 _rowcount = mostCurrent._c1.getRowCount();
- //BA.debugLineNum = 95;BA.debugLine="ht2.PostString(\"http://bemq.ir/getcontent.ph";
+ //BA.debugLineNum = 99;BA.debugLine="ht2.PostString(\"http://bemq.ir/getcontent.ph";
 mostCurrent._ht2._poststring("http://bemq.ir/getcontent.php","tedad="+BA.NumberToString(_rowcount)+"");
  }else {
- //BA.debugLineNum = 99;BA.debugLine="DBload(\"\")";
+ //BA.debugLineNum = 104;BA.debugLine="DBload(\"\")";
 _dbload("");
  };
  }else if((_job._jobname).equals("job2")) { 
- //BA.debugLineNum = 104;BA.debugLine="If job.GetString = \"nothing\" Then";
+ //BA.debugLineNum = 109;BA.debugLine="If job.GetString = \"nothing\" Then";
 if ((_job._getstring()).equals("nothing")) { 
- //BA.debugLineNum = 105;BA.debugLine="ToastMessageShow(\"error\",False)";
+ //BA.debugLineNum = 110;BA.debugLine="ToastMessageShow(\"error\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow("error",anywheresoftware.b4a.keywords.Common.False);
  }else {
- //BA.debugLineNum = 110;BA.debugLine="Dim str1() As String = Regex.Split(\"<br>\",jo";
+ //BA.debugLineNum = 115;BA.debugLine="Dim str1() As String = Regex.Split(\"<br>\",jo";
 _str1 = anywheresoftware.b4a.keywords.Common.Regex.Split("<br>",_job._getstring());
- //BA.debugLineNum = 111;BA.debugLine="For i = 0 To str1.Length-1";
+ //BA.debugLineNum = 116;BA.debugLine="For i = 0 To str1.Length-1";
 {
-final int step66 = 1;
-final int limit66 = (int) (_str1.length-1);
-for (_i = (int) (0); (step66 > 0 && _i <= limit66) || (step66 < 0 && _i >= limit66); _i = ((int)(0 + _i + step66))) {
- //BA.debugLineNum = 112;BA.debugLine="Dim str2() As String = Regex.Split(\"#\",str1";
+final int step65 = 1;
+final int limit65 = (int) (_str1.length-1);
+for (_i = (int) (0); (step65 > 0 && _i <= limit65) || (step65 < 0 && _i >= limit65); _i = ((int)(0 + _i + step65))) {
+ //BA.debugLineNum = 117;BA.debugLine="Dim str2() As String = Regex.Split(\"#\",str1";
 _str2 = anywheresoftware.b4a.keywords.Common.Regex.Split("#",_str1[_i]);
- //BA.debugLineNum = 114;BA.debugLine="sq.ExecNonQuery(\"INSERT INTO bem (id,name,";
+ //BA.debugLineNum = 119;BA.debugLine="sq.ExecNonQuery(\"INSERT INTO bem (id,name,";
 _sq.ExecNonQuery("INSERT INTO bem (id,name,fnam,tel,address) VALUES (null,'"+_str2[(int) (1)]+"','"+_str2[(int) (2)]+"','"+_str2[(int) (3)]+"','"+_str2[(int) (4)]+"')");
- //BA.debugLineNum = 115;BA.debugLine="DBload(\"\")";
+ //BA.debugLineNum = 120;BA.debugLine="DBload(\"\")";
 _dbload("");
  }
 };
- //BA.debugLineNum = 118;BA.debugLine="ProgressDialogHide";
+ //BA.debugLineNum = 123;BA.debugLine="ProgressDialogHide";
 anywheresoftware.b4a.keywords.Common.ProgressDialogHide();
  };
  };
  };
- //BA.debugLineNum = 124;BA.debugLine="End Sub";
+ //BA.debugLineNum = 129;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{

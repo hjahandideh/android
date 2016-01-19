@@ -315,7 +315,6 @@ public anywheresoftware.b4a.objects.EditTextWrapper _edittext1 = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edittext2 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
 public anywheresoftware.b4a.objects.LabelWrapper _label2 = null;
-public anywheresoftware.b4a.sql.SQL.CursorWrapper _c2 = null;
 public b4a.example.scond _scond = null;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public bem.com.main _main = null;
@@ -340,10 +339,10 @@ anywheresoftware.b4a.objects.ConcreteViewWrapper _view1 = null;
 mostCurrent._activity.LoadLayout("ozveyat",mostCurrent.activityBA);
  //BA.debugLineNum = 30;BA.debugLine="For Each view1 As View In Activity.getallviewsrecu";
 _view1 = new anywheresoftware.b4a.objects.ConcreteViewWrapper();
-final anywheresoftware.b4a.BA.IterableList group15 = mostCurrent._activity.GetAllViewsRecursive();
-final int groupLen15 = group15.getSize();
-for (int index15 = 0;index15 < groupLen15 ;index15++){
-_view1.setObject((android.view.View)(group15.Get(index15)));
+final anywheresoftware.b4a.BA.IterableList group14 = mostCurrent._activity.GetAllViewsRecursive();
+final int groupLen14 = group14.getSize();
+for (int index14 = 0;index14 < groupLen14 ;index14++){
+_view1.setObject((android.view.View)(group14.Get(index14)));
  //BA.debugLineNum = 31;BA.debugLine="If view1 Is Label Then";
 if (_view1.getObjectOrNull() instanceof android.widget.TextView) { 
  //BA.debugLineNum = 32;BA.debugLine="Dim Label1 As Label";
@@ -372,6 +371,18 @@ mostCurrent._ht._initialize(processBA,"Register",ozveyat.getObject());
  //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return "";
 }
+public static boolean  _activity_keypress(int _keycode) throws Exception{
+ //BA.debugLineNum = 87;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+ //BA.debugLineNum = 88;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
+ //BA.debugLineNum = 89;BA.debugLine="StartActivity(main2)";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._main2.getObject()));
+ //BA.debugLineNum = 90;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ };
+ //BA.debugLineNum = 93;BA.debugLine="End Sub";
+return false;
+}
 public static String  _activity_pause(boolean _userclosed) throws Exception{
  //BA.debugLineNum = 80;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
  //BA.debugLineNum = 82;BA.debugLine="End Sub";
@@ -391,6 +402,8 @@ _go = "";
 _go = "&username="+mostCurrent._edittext1.getText()+"&pass="+mostCurrent._edittext2.getText();
  //BA.debugLineNum = 69;BA.debugLine="ht.PostString(\"http://bemq.ir/read_vorood.php\",go";
 mostCurrent._ht._poststring("http://bemq.ir/read_vorood.php",_go);
+ //BA.debugLineNum = 70;BA.debugLine="ProgressDialogShow(\"Please Wait ...\")";
+anywheresoftware.b4a.keywords.Common.ProgressDialogShow(mostCurrent.activityBA,"Please Wait ...");
  //BA.debugLineNum = 71;BA.debugLine="main3.s=EditText1.Text";
 mostCurrent._main3._s = mostCurrent._edittext1.getText();
  //BA.debugLineNum = 73;BA.debugLine="End Sub";
@@ -421,8 +434,6 @@ mostCurrent._edittext2 = new anywheresoftware.b4a.objects.EditTextWrapper();
 mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
  //BA.debugLineNum = 22;BA.debugLine="Private Label2 As Label";
 mostCurrent._label2 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 23;BA.debugLine="Dim c2 As Cursor";
-mostCurrent._c2 = new anywheresoftware.b4a.sql.SQL.CursorWrapper();
  //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
